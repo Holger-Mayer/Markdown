@@ -9,31 +9,31 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 extension UTType {
-    static var exampleText: UTType {
-        UTType(importedAs: "com.example.plain-text")
+    static var markdownText: UTType {
+        UTType(importedAs: "de.h-mayer.markdown")
     }
 }
 
 struct MarkdownDocument: FileDocument {
-    var text: String
-
-    init(text: String = "Hello, world!") {
-        self.text = text
+    var markdownContent : String
+    
+    init(text: String = "# Chapter 1") {
+        self.markdownContent = text
     }
-
-    static var readableContentTypes: [UTType] { [.exampleText] }
-
+    
+    static var readableContentTypes: [UTType] { [.markdownText] }
+    
     init(configuration: ReadConfiguration) throws {
         guard let data = configuration.file.regularFileContents,
               let string = String(data: data, encoding: .utf8)
         else {
             throw CocoaError(.fileReadCorruptFile)
         }
-        text = string
+        markdownContent = string
     }
     
     func fileWrapper(configuration: WriteConfiguration) throws -> FileWrapper {
-        let data = text.data(using: .utf8)!
+        let data = markdownContent.data(using: .utf8)!
         return .init(regularFileWithContents: data)
     }
 }

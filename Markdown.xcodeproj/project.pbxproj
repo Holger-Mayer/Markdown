@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,9 +14,37 @@
 		5497AC0D255359000021F861 /* MarkdownDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497ABE2255358FE0021F861 /* MarkdownDocument.swift */; };
 		5497AC0E255359000021F861 /* MarkdownDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497ABE2255358FE0021F861 /* MarkdownDocument.swift */; };
 		5497AC0F255359000021F861 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497ABE3255358FE0021F861 /* ContentView.swift */; };
-		5497AC10255359000021F861 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497ABE3255358FE0021F861 /* ContentView.swift */; };
 		5497AC11255359000021F861 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5497ABE4255358FF0021F861 /* Assets.xcassets */; };
 		5497AC12255359000021F861 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5497ABE4255358FF0021F861 /* Assets.xcassets */; };
+		5497AC2F255359440021F861 /* FileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC27255359440021F861 /* FileLoader.swift */; };
+		5497AC30255359440021F861 /* FileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC27255359440021F861 /* FileLoader.swift */; };
+		5497AC31255359440021F861 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC28255359440021F861 /* ConfigView.swift */; };
+		5497AC32255359440021F861 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC28255359440021F861 /* ConfigView.swift */; };
+		5497AC33255359440021F861 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC29255359440021F861 /* HelpView.swift */; };
+		5497AC34255359440021F861 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC29255359440021F861 /* HelpView.swift */; };
+		5497AC35255359440021F861 /* LicenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC2A255359440021F861 /* LicenseView.swift */; };
+		5497AC36255359440021F861 /* LicenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC2A255359440021F861 /* LicenseView.swift */; };
+		5497AC37255359440021F861 /* ConfigPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC2B255359440021F861 /* ConfigPopoverView.swift */; };
+		5497AC38255359440021F861 /* ConfigPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC2B255359440021F861 /* ConfigPopoverView.swift */; };
+		5497AC39255359440021F861 /* ConfigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC2C255359440021F861 /* ConfigButton.swift */; };
+		5497AC3A255359440021F861 /* ConfigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC2C255359440021F861 /* ConfigButton.swift */; };
+		5497AC3B255359440021F861 /* LicenseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC2D255359440021F861 /* LicenseButton.swift */; };
+		5497AC3C255359440021F861 /* LicenseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC2D255359440021F861 /* LicenseButton.swift */; };
+		5497AC3D255359440021F861 /* HelpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC2E255359440021F861 /* HelpButton.swift */; };
+		5497AC3E255359440021F861 /* HelpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC2E255359440021F861 /* HelpButton.swift */; };
+		5497AC472553595E0021F861 /* CommandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC442553595E0021F861 /* CommandView.swift */; };
+		5497AC482553595E0021F861 /* CommandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC442553595E0021F861 /* CommandView.swift */; };
+		5497AC492553595E0021F861 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC452553595E0021F861 /* TextView.swift */; };
+		5497AC4B2553595E0021F861 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC462553595E0021F861 /* WebView.swift */; };
+		5497AC53255359B60021F861 /* License.md in Resources */ = {isa = PBXBuildFile; fileRef = 5497AC51255359B60021F861 /* License.md */; };
+		5497AC54255359B60021F861 /* License.md in Resources */ = {isa = PBXBuildFile; fileRef = 5497AC51255359B60021F861 /* License.md */; };
+		5497AC55255359B60021F861 /* Help.md in Resources */ = {isa = PBXBuildFile; fileRef = 5497AC52255359B60021F861 /* Help.md */; };
+		5497AC56255359B60021F861 /* Help.md in Resources */ = {isa = PBXBuildFile; fileRef = 5497AC52255359B60021F861 /* Help.md */; };
+		5497AC5D25535AAF0021F861 /* Ink in Frameworks */ = {isa = PBXBuildFile; productRef = 5497AC5C25535AAF0021F861 /* Ink */; };
+		5497AC6425535ABD0021F861 /* Ink in Frameworks */ = {isa = PBXBuildFile; productRef = 5497AC6325535ABD0021F861 /* Ink */; };
+		5497AC6E25535BA50021F861 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC6D25535BA50021F861 /* TextView.swift */; };
+		5497AC7825535C210021F861 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC7725535C210021F861 /* WebView.swift */; };
+		5497AC8225535CB40021F861 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497AC8125535CB40021F861 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +80,22 @@
 		5497AC04255359000021F861 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5497AC08255359000021F861 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		5497AC0A255359000021F861 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5497AC27255359440021F861 /* FileLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileLoader.swift; sourceTree = "<group>"; };
+		5497AC28255359440021F861 /* ConfigView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
+		5497AC29255359440021F861 /* HelpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		5497AC2A255359440021F861 /* LicenseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseView.swift; sourceTree = "<group>"; };
+		5497AC2B255359440021F861 /* ConfigPopoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigPopoverView.swift; sourceTree = "<group>"; };
+		5497AC2C255359440021F861 /* ConfigButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigButton.swift; sourceTree = "<group>"; };
+		5497AC2D255359440021F861 /* LicenseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseButton.swift; sourceTree = "<group>"; };
+		5497AC2E255359440021F861 /* HelpButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpButton.swift; sourceTree = "<group>"; };
+		5497AC442553595E0021F861 /* CommandView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandView.swift; sourceTree = "<group>"; };
+		5497AC452553595E0021F861 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		5497AC462553595E0021F861 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		5497AC51255359B60021F861 /* License.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = License.md; sourceTree = "<group>"; };
+		5497AC52255359B60021F861 /* Help.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Help.md; sourceTree = "<group>"; };
+		5497AC6D25535BA50021F861 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		5497AC7725535C210021F861 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		5497AC8125535CB40021F861 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5497AC5D25535AAF0021F861 /* Ink in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5497AC6425535ABD0021F861 /* Ink in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,15 +141,19 @@
 				5497ABFC255359000021F861 /* Tests iOS */,
 				5497AC07255359000021F861 /* Tests macOS */,
 				5497ABEA255358FF0021F861 /* Products */,
+				5497AC6225535ABD0021F861 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		5497ABE0255358FE0021F861 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				5497AC52255359B60021F861 /* Help.md */,
+				5497AC51255359B60021F861 /* License.md */,
+				5497AC43255359550021F861 /* Views */,
+				5497AC25255359440021F861 /* Configuration */,
 				5497ABE1255358FE0021F861 /* MarkdownApp.swift */,
 				5497ABE2255358FE0021F861 /* MarkdownDocument.swift */,
-				5497ABE3255358FE0021F861 /* ContentView.swift */,
 				5497ABE4255358FF0021F861 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -123,6 +173,9 @@
 		5497ABEB255358FF0021F861 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				5497AC462553595E0021F861 /* WebView.swift */,
+				5497AC452553595E0021F861 /* TextView.swift */,
+				5497ABE3255358FE0021F861 /* ContentView.swift */,
 				5497ABEC255358FF0021F861 /* Info.plist */,
 			);
 			path = iOS;
@@ -133,6 +186,9 @@
 			children = (
 				5497ABF3255359000021F861 /* Info.plist */,
 				5497ABF4255359000021F861 /* macOS.entitlements */,
+				5497AC6D25535BA50021F861 /* TextView.swift */,
+				5497AC7725535C210021F861 /* WebView.swift */,
+				5497AC8125535CB40021F861 /* ContentView.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -155,6 +211,44 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
+		5497AC25255359440021F861 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				5497AC26255359440021F861 /* Tools */,
+				5497AC28255359440021F861 /* ConfigView.swift */,
+				5497AC29255359440021F861 /* HelpView.swift */,
+				5497AC2A255359440021F861 /* LicenseView.swift */,
+				5497AC2B255359440021F861 /* ConfigPopoverView.swift */,
+				5497AC2C255359440021F861 /* ConfigButton.swift */,
+				5497AC2D255359440021F861 /* LicenseButton.swift */,
+				5497AC2E255359440021F861 /* HelpButton.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		5497AC26255359440021F861 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				5497AC27255359440021F861 /* FileLoader.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		5497AC43255359550021F861 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5497AC442553595E0021F861 /* CommandView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5497AC6225535ABD0021F861 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,6 +265,9 @@
 			dependencies = (
 			);
 			name = "Markdown (iOS)";
+			packageProductDependencies = (
+				5497AC5C25535AAF0021F861 /* Ink */,
+			);
 			productName = "Markdown (iOS)";
 			productReference = 5497ABE9255358FF0021F861 /* Markdown.app */;
 			productType = "com.apple.product-type.application";
@@ -188,6 +285,9 @@
 			dependencies = (
 			);
 			name = "Markdown (macOS)";
+			packageProductDependencies = (
+				5497AC6325535ABD0021F861 /* Ink */,
+			);
 			productName = "Markdown (macOS)";
 			productReference = 5497ABF1255359000021F861 /* Markdown.app */;
 			productType = "com.apple.product-type.application";
@@ -262,6 +362,9 @@
 				Base,
 			);
 			mainGroup = 5497ABDB255358FE0021F861;
+			packageReferences = (
+				5497AC5B25535AAF0021F861 /* XCRemoteSwiftPackageReference "ink" */,
+			);
 			productRefGroup = 5497ABEA255358FF0021F861 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -279,6 +382,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5497AC55255359B60021F861 /* Help.md in Resources */,
+				5497AC53255359B60021F861 /* License.md in Resources */,
 				5497AC11255359000021F861 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +392,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5497AC56255359B60021F861 /* Help.md in Resources */,
+				5497AC54255359B60021F861 /* License.md in Resources */,
 				5497AC12255359000021F861 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,8 +420,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				5497AC0B255359000021F861 /* MarkdownApp.swift in Sources */,
+				5497AC33255359440021F861 /* HelpView.swift in Sources */,
+				5497AC472553595E0021F861 /* CommandView.swift in Sources */,
+				5497AC492553595E0021F861 /* TextView.swift in Sources */,
+				5497AC3D255359440021F861 /* HelpButton.swift in Sources */,
+				5497AC31255359440021F861 /* ConfigView.swift in Sources */,
+				5497AC35255359440021F861 /* LicenseView.swift in Sources */,
+				5497AC39255359440021F861 /* ConfigButton.swift in Sources */,
 				5497AC0D255359000021F861 /* MarkdownDocument.swift in Sources */,
+				5497AC2F255359440021F861 /* FileLoader.swift in Sources */,
+				5497AC3B255359440021F861 /* LicenseButton.swift in Sources */,
+				5497AC37255359440021F861 /* ConfigPopoverView.swift in Sources */,
 				5497AC0F255359000021F861 /* ContentView.swift in Sources */,
+				5497AC4B2553595E0021F861 /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,8 +441,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				5497AC0C255359000021F861 /* MarkdownApp.swift in Sources */,
+				5497AC34255359440021F861 /* HelpView.swift in Sources */,
+				5497AC8225535CB40021F861 /* ContentView.swift in Sources */,
+				5497AC482553595E0021F861 /* CommandView.swift in Sources */,
+				5497AC6E25535BA50021F861 /* TextView.swift in Sources */,
+				5497AC3E255359440021F861 /* HelpButton.swift in Sources */,
+				5497AC32255359440021F861 /* ConfigView.swift in Sources */,
+				5497AC36255359440021F861 /* LicenseView.swift in Sources */,
+				5497AC3A255359440021F861 /* ConfigButton.swift in Sources */,
 				5497AC0E255359000021F861 /* MarkdownDocument.swift in Sources */,
-				5497AC10255359000021F861 /* ContentView.swift in Sources */,
+				5497AC30255359440021F861 /* FileLoader.swift in Sources */,
+				5497AC3C255359440021F861 /* LicenseButton.swift in Sources */,
+				5497AC38255359440021F861 /* ConfigPopoverView.swift in Sources */,
+				5497AC7825535C210021F861 /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,6 +831,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5497AC5B25535AAF0021F861 /* XCRemoteSwiftPackageReference "ink" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnsundell/ink.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5497AC5C25535AAF0021F861 /* Ink */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5497AC5B25535AAF0021F861 /* XCRemoteSwiftPackageReference "ink" */;
+			productName = Ink;
+		};
+		5497AC6325535ABD0021F861 /* Ink */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5497AC5B25535AAF0021F861 /* XCRemoteSwiftPackageReference "ink" */;
+			productName = Ink;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5497ABDC255358FE0021F861 /* Project object */;
 }
