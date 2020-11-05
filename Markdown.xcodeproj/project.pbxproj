@@ -132,6 +132,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54818FB22553DA6500AA7564 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		5497ABDB255358FE0021F861 = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +203,7 @@
 		5497ABFC255359000021F861 /* Tests iOS */ = {
 			isa = PBXGroup;
 			children = (
+				54818FB22553DA6500AA7564 /* Tools */,
 				5497ABFD255359000021F861 /* Tests_iOS.swift */,
 				5497ABFF255359000021F861 /* Info.plist */,
 			);
