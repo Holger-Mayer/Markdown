@@ -14,16 +14,15 @@ struct CommandView: View {
     var body: some View {
         HStack {
             Button("Chapter") {
-                let range  = Range(selectedRange,in:markdownContent)
-                markdownContent.replaceSubrange(range!, with: "\n# Chapter")
-                selectedRange = NSMakeRange(selectedRange.length+selectedRange.location, 0)
+                let tag =  "\n# Chapter"
+                replaceRangeWith(tag)
             }
             Button("Section") {
-                let range  = Range(selectedRange,in:markdownContent)
-                markdownContent.replaceSubrange(range!, with: "\n## Section")
-            }
+                let tag =  "\n## Section"
+                replaceRangeWith(tag)
+             }
             Button(action: {
-                    let tableString  =
+                    let tag  =
                         """
                             \n
                             | A | B | C | D | E |
@@ -33,27 +32,43 @@ struct CommandView: View {
                             | l | c | r |   |   |
                             \n
                             """
-                let range  = Range(selectedRange,in:markdownContent)
-                markdownContent.replaceSubrange(range!, with: tableString)
+                  replaceRangeWith(tag)
 
             }) {
                  Image(systemName: "tablecells")
             }
             Button(action: {
-                 let range  = Range(selectedRange,in:markdownContent)
-                 markdownContent.replaceSubrange(range!, with: "** Bold **")
-               }) {
+                surroundRangeWith(startTag:  "**", endTag: "**")
+                 }) {
                 Image(systemName: "bold")
             }
+            
             Button(action: {
-                let range  = Range(selectedRange,in:markdownContent)
-                markdownContent.replaceSubrange(range!, with: "* Italic *")
+                 surroundRangeWith(startTag:  "*", endTag: "*")
             }) {
                 Image(systemName: "italic")
             }
 
         }
     }
+    
+    func replaceRangeWith(_ tag : String) {
+        let range  = Range(selectedRange,in:markdownContent)
+        markdownContent.replaceSubrange(range!, with:tag)
+        selectedRange = NSMakeRange(selectedRange.length+selectedRange.location+tag.count,0)
+    }
+    
+    func surroundRangeWith(startTag:String, endTag:String) {
+        let range  = Range(selectedRange,in:markdownContent)
+        
+        let startIndex = range?.lowerBound
+        let endIndex = range?.upperBound
+        let innerContent = markdownContent[startIndex!..<endIndex!]
+        let newInnerContent = startTag +  innerContent + endTag
+        markdownContent.replaceSubrange(range!, with: newInnerContent)
+        selectedRange = NSMakeRange(selectedRange.location,selectedRange.length + startTag.count + endTag.count)
+    }
+    
 }
 
 struct CommandView_Previews: PreviewProvider {
