@@ -38,13 +38,13 @@ struct CommandView: View {
                  Image(systemName: "tablecells")
             }
             Button(action: {
-                surroundRangeWith(startTag:  "**", endTag: "**")
+                toogleSurroundingTag(tag: "**")
                  }) {
                 Image(systemName: "bold")
             }
             
             Button(action: {
-                 surroundRangeWith(startTag:  "*", endTag: "*")
+                toogleSurroundingTag(tag: "*")
             }) {
                 Image(systemName: "italic")
             }
@@ -69,6 +69,23 @@ struct CommandView: View {
         selectedRange = NSMakeRange(selectedRange.location,selectedRange.length + startTag.count + endTag.count)
     }
     
+    func toogleSurroundingTag(tag : String){
+        let range  = Range(selectedRange,in:markdownContent)
+        
+        let startIndex = range?.lowerBound
+        let endIndex = range?.upperBound
+        let  innerContent = markdownContent[startIndex!..<endIndex!]
+
+        if innerContent.hasPrefix(tag) && innerContent.hasSuffix(tag) && innerContent.count >= tag.count * 2 {
+            var newInnerContent = innerContent.dropFirst(tag.count)
+            newInnerContent = newInnerContent.dropLast(tag.count)
+            
+            markdownContent.replaceSubrange(range!, with: newInnerContent)
+            selectedRange = NSMakeRange(selectedRange.location,selectedRange.length - 2 * tag.count)
+       } else {
+            surroundRangeWith(startTag: tag, endTag: tag)
+        }
+    }
 }
 
 struct CommandView_Previews: PreviewProvider {
