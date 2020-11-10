@@ -34,7 +34,30 @@ struct WebView : UIViewRepresentable {
         } else {
             htmlStart = """
          <html><head><style>
-        h1 {color: blue;}
+            :root {
+            color-scheme: light dark;
+            --title-color: red;
+            --subhead-color: green;
+            --link-color: blue;
+        }
+
+        @media screen and (prefers-color-scheme: dark) {
+            :root {
+                --title-color: #ff8080;
+                --subhead-color: #80ff80;
+                --link-color: #93d5ff;
+            }
+        }
+
+        h1 {
+            font: -apple-system-headline;
+            color: var(--title-color);
+        }
+
+        h2 {
+            font: -apple-system-subheadline;
+            color: var(--subhead-color);
+        }
         table { width:100%; border-collapse: collapse;}
         table, th, td {
         border: 1px solid black;}
