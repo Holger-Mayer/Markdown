@@ -38,14 +38,14 @@ struct WebView : UIViewRepresentable {
             color-scheme: light dark;
             --title-color: red;
             --subhead-color: green;
-            --link-color: blue;
+            --tableframe-color: black;
         }
 
         @media screen and (prefers-color-scheme: dark) {
             :root {
                 --title-color: #ff8080;
                 --subhead-color: #80ff80;
-                --link-color: #93d5ff;
+                --tableframe-color: #dddddd;
             }
         }
 
@@ -60,7 +60,7 @@ struct WebView : UIViewRepresentable {
         }
         table { width:100%; border-collapse: collapse;}
         table, th, td {
-        border: 1px solid black;}
+        border: 1px solid var(--tableframe-color);}
         </style></header> <body>
         """
         }
