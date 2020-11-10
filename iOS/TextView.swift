@@ -18,6 +18,8 @@ struct TextView : UIViewRepresentable {
         textView.isSelectable = true
         textView.isUserInteractionEnabled = true
         textView.delegate = context.coordinator
+        textView.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
+        
         return textView
     }
     
