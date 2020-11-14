@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct HelpButton: View {
-    @State var showingHelpView : Bool = false
+    @State var showHelpView : Bool = false
     
     var body: some View {
         Button(action: {
-            self.showingHelpView.toggle()
+            self.showHelpView.toggle()
         }) {
             Text("Help")
-        }.sheet(isPresented: $showingHelpView) {
+        }.sheet(isPresented: $showHelpView) {
             LicenseView(content:FileLoader.load(fileName:"Help"))
         }
     }

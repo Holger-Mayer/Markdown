@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct LicenseButton: View {
-    @State var showingLicenseView : Bool = false
+    @State var showLicenseView : Bool = false
     
     var body: some View {
         Button(action: {
-            self.showingLicenseView.toggle()
+            self.showLicenseView.toggle()
         }) {
             Text("License")
-        }.sheet(isPresented: $showingLicenseView) {
+        }.sheet(isPresented: $showLicenseView) {
             LicenseView(content:FileLoader.load(fileName:"License"))
         }
     }
