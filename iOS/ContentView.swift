@@ -13,7 +13,9 @@ struct ContentView: View {
     @State var selectedRange : NSRange = NSMakeRange(0, 0)
     @State var useExternalCSS : Bool = false
     @State var externalCSSPath : String = "http://macminiservermax.local/Demo.css"
-    
+    @Environment(\.undoManager) var undoManager
+
+                                    
     var body: some View {
         HStack {
             TextView(text: $document.markdownContent,selectedRange:$selectedRange)
@@ -25,6 +27,18 @@ struct ContentView: View {
             ,
             trailing:
                 HStack {
+                    if undoManager != nil {
+                        Button(action: {
+                            undoManager?.undo()
+                        }) {
+                            Image(systemName: "arrow.uturn.backward.circle")
+                        }.disabled(!undoManager!.canUndo)
+                        Button(action: {
+                            undoManager?.redo()
+                        }) {
+                            Image(systemName: "arrow.uturn.forward.circle")
+                        }.disabled(!undoManager!.canRedo)
+                    }
                     Button(action: {
                         self.showingConfigPopover.toggle()
                     }) {
